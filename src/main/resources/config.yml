@@ -1,0 +1,15 @@
+minimum-bet: 10.0
+maximum-bet: 1000000.0
+house-fee-percent: 0.0
+challenge-expiration-seconds: 300
+history-limit: 10
+gui:
+  title: "&8SXULL &7» &6Coinflip"
+messages:
+  prefix: "&8[&6SXULL&8] &7"
+  created: "&aChallenge created for %amount%. Open /coinflip for others to join."
+  joined: "&e%player% joined your coinflip."
+  winner: "&6%winner% &awon &e%amount%&a!"
+  cancelled: "&aYour stake of %amount% was refunded."
+sounds:
+  enabled: true
