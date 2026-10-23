@@ -1,0 +1,24 @@
+name: SXULLCoinflip
+version: 1.0.0
+main: gg.sxull.coinflip.SXULLCoinflip
+api-version: '26.2'
+depend: [Vault]
+softdepend: [PlaceholderAPI]
+commands:
+  coinflip:
+    description: Open and manage coinflip challenges
+    usage: /coinflip [create <amount>|join <player>|cancel|history|reload]
+    aliases: [cf]
+permissions:
+  sxull.coinflip.use:
+    default: true
+  sxull.coinflip.create:
+    default: true
+  sxull.coinflip.join:
+    default: true
+  sxull.coinflip.cancel:
+    default: true
+  sxull.coinflip.history:
+    default: true
+  sxull.coinflip.reload:
+    default: op
