@@ -71,7 +71,6 @@ public final class SXULLCoinflip extends JavaPlugin implements Listener, Command
         if (!(sender instanceof Player p)) { sender.sendMessage("This command requires a player."); return true; }
         switch (sub) {
             case "create" -> {
-                if (!p.hasPermission("sxull.coinflip.create")) { msg(p, "&cNo permission."); return true; }
                 if (args.length != 2) { usage(p); return true; }
                 double amount;
                 try { amount = Double.parseDouble(args[1]); } catch (NumberFormatException ex) { msg(p, "&cEnter a valid amount."); return true; }
@@ -104,7 +103,6 @@ public final class SXULLCoinflip extends JavaPlugin implements Listener, Command
                 } return true;
             }
             case "history" -> {
-                if (!p.hasPermission("sxull.coinflip.history")) { msg(p, "&cNo permission."); return true; }
                 List<String> entries = history.getOrDefault(p.getUniqueId(), List.of());
                 msg(p, "&6Recent results:");
                 if (entries.isEmpty()) msg(p, "&7No results recorded this session.");
@@ -116,7 +114,6 @@ public final class SXULLCoinflip extends JavaPlugin implements Listener, Command
     }
 
     private void join(Player joiner, UUID ownerId) {
-        if (!joiner.hasPermission("sxull.coinflip.join")) { msg(joiner, "&cNo permission."); return; }
         if (joiner.getUniqueId().equals(ownerId)) { msg(joiner, "&cYou cannot join your own challenge."); return; }
         synchronized (challenges) {
             Challenge c = challenges.get(ownerId);
